@@ -6,7 +6,6 @@ import {
   selectGeminiStatus,
 } from "../../store/geminifunctionSlice";
 import Modal from "react-modal";
-import { Loader } from "../index";
 
 // React Modal Integrations
 Modal.setAppElement(document.getElementById("root"));
@@ -30,6 +29,8 @@ export default function Utilities({ isOpen, closeModal }) {
   const dispatch = useDispatch();
   const status = useSelector(selectGeminiStatus);
   const navigate = useNavigate();
+
+  const customPrompt = `Generate an engaging short story in the ${inputValues.genre} genre. The story should center on a ${inputValues.protagonist} who encounters a significant conflict or adversary in the form of ${inputValues.antagonist} The central theme of the story should be ${inputValues.theme}. Begin with a strong introduction that sets up the world and introduces the protagonist. Detail the protagonist's background, their current situation, and their primary goals or desires. Introduce the antagonist and provide insight into their background, motivations, and the conflict they bring. Develop the story by detailing the protagonist's journey as they face the antagonist, including key events that build tension and move the plot forward. Highlight the protagonist's challenges and the pivotal moments in their struggle. Conclude with a resolution that ties back to the central theme, illustrating how the protagonist has grown or what they have learned from their experiences.`;
 
   const handleChange = (e) => {
     setInputValues((prevValues) => ({
@@ -63,7 +64,6 @@ export default function Utilities({ isOpen, closeModal }) {
     // if (!inputValues.geminiKey) {
     //   return; // Prevent submission if key is missing
     // }
-    const myprompt = `Generate an engaging short story in the ${inputValues.genre} genre. The story should center on a ${inputValues.protagonist} who encounters a significant conflict or adversary in the form of ${inputValues.antagonist} The central theme of the story should be ${inputValues.theme}. Begin with a strong introduction that sets up the world and introduces the protagonist. Detail the protagonist's background, their current situation, and their primary goals or desires. Introduce the antagonist and provide insight into their background, motivations, and the conflict they bring. Develop the story by detailing the protagonist's journey as they face the antagonist, including key events that build tension and move the plot forward. Highlight the protagonist's challenges and the pivotal moments in their struggle. Conclude with a resolution that ties back to the central theme, illustrating how the protagonist has grown or what they have learned from their experiences.`;
     let data = JSON.stringify({
       system_instruction: {
         parts: {
@@ -72,7 +72,7 @@ export default function Utilities({ isOpen, closeModal }) {
       },
       contents: {
         parts: {
-          text: myprompt,
+          text: customPrompt,
         },
       },
     });
@@ -99,7 +99,6 @@ export default function Utilities({ isOpen, closeModal }) {
       contentLabel="Input Form Modal"
     >
       <>
-        {status === "loading" && <Loader />}
         <div className="form-wrapper">
           <h2>Enter the Details...</h2>
           <Form onSubmit={handleSubmit} className="inputs-form">
