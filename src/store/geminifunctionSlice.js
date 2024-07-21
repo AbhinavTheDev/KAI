@@ -11,8 +11,6 @@ export const fetchGeminiData = createAsyncThunk(
     const genAI = new GoogleGenerativeAI(apiKey);
     const model = genAI.getGenerativeModel({
       model: "gemini-1.5-flash",
-      systemInstruction:
-        "Objective: Transform raw thoughts and ideas into polished, engaging stories that capture a writers unique style and voice.\nInput:\nExample Stories (3-5): A user will provide examples of story book references that will guide you in understanding the preferences for word choice, sentence structure, and overall voice.\nOutput:\nStory: A well-structured story post, suitable for platforms like hashnode, linkedin or medium.\nThe draft will include:\nClear and engaging writing: you will strive to make the writing clear, concise and interesting for the target audience.\nTone and style alignment: The language and style will closely match the examples provided, ensuring consistency with desired voice.",
     });
     try {
       const result = await model.generateContent(prompt);

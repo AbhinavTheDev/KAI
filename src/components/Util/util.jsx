@@ -6,7 +6,7 @@ import {
   selectGeminiStatus,
 } from "../../store/geminifunctionSlice";
 import Modal from "react-modal";
-
+import { Loader } from "../index.js";
 // React Modal Integrations
 Modal.setAppElement(document.getElementById("root"));
 // inside function parenthesis -> { isOpen, closeModal }
@@ -30,7 +30,7 @@ export default function Utilities({ isOpen, closeModal }) {
   const status = useSelector(selectGeminiStatus);
   const navigate = useNavigate();
 
-  const customPrompt = `Generate an engaging short story in the ${inputValues.genre} genre. The story should center on a ${inputValues.protagonist} who encounters a significant conflict or adversary in the form of ${inputValues.antagonist} The central theme of the story should be ${inputValues.theme}. Begin with a strong introduction that sets up the world and introduces the protagonist. Detail the protagonist's background, their current situation, and their primary goals or desires. Introduce the antagonist and provide insight into their background, motivations, and the conflict they bring. Develop the story by detailing the protagonist's journey as they face the antagonist, including key events that build tension and move the plot forward. Highlight the protagonist's challenges and the pivotal moments in their struggle. Conclude with a resolution that ties back to the central theme, illustrating how the protagonist has grown or what they have learned from their experiences.`;
+  const customPrompt = `Examples Are : Ambrose Bierce, “An Occurrence at Owl Creek Bridge” (1890) , Edgar Allan Poe, “The Tell-Tale Heart” (1843), Washington Irving, “Rip Van Winkle” (1819) and “The Legend of Sleepy Hollow” (1820).\nGenerate an engaging short story in the ${inputValues.genre} genre. The story should center on a ${inputValues.protagonist} who encounters a significant conflict or adversary in the form of ${inputValues.antagonist} The central theme of the story should be ${inputValues.theme}. Begin with a strong introduction that sets up the world and introduces the protagonist. Detail the protagonist's background, their current situation, and their primary goals or desires. Introduce the antagonist and provide insight into their background, motivations, and the conflict they bring. Develop the story by detailing the protagonist's journey as they face the antagonist, including key events that build tension and move the plot forward. Highlight the protagonist's challenges and the pivotal moments in their struggle. Conclude with a resolution that ties back to the central theme, illustrating how the protagonist has grown or what they have learned from their experiences.The story should divide into paragraphs and each paragraph must be enclosed in html paragraph tags and quotes tags whichever is applicable.`;
 
   const handleChange = (e) => {
     setInputValues((prevValues) => ({
@@ -67,7 +67,7 @@ export default function Utilities({ isOpen, closeModal }) {
     let data = JSON.stringify({
       system_instruction: {
         parts: {
-          text: "You are an esteemed short story writer channeling the styles of Stephen King, Virginia Woolf, and Neil Gaiman.",
+          text: "You are a short story generator bot who channeling the styles of Stephen King, Virginia Woolf, and Neil Gaiman.Objective: Transform raw thoughts and ideas into polished, engaging stories that capture a writers unique style and voice.\nInput:\nExample Stories (3-5): A user will provide examples of story book references that will guide you in understanding the preferences for word choice, sentence structure, and overall voice.\nOutput:\nStory: A well-structured story post, suitable for platforms like hashnode, linkedin or medium.\nThe draft will include:\nClear and engaging writing: you will strive to make the writing clear, concise and interesting for the target audience.\nTone and style alignment: The language and style will closely match the examples provided, ensuring consistency with desired voice.",
         },
       },
       contents: {
@@ -99,6 +99,7 @@ export default function Utilities({ isOpen, closeModal }) {
       contentLabel="Input Form Modal"
     >
       <>
+        {status === "loading" && <Loader />}
         <div className="form-wrapper">
           <h2>Enter the Details...</h2>
           <Form onSubmit={handleSubmit} className="inputs-form">

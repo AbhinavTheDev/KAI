@@ -1,5 +1,13 @@
 {
   "files": {
+    "src/components/Story/Story.jsx": [
+      {
+        "id": "a16ea434-9b16-416b-9958-be05141b2119",
+        "line": 30,
+        "version": 2461,
+        "index": 754
+      }
+    ],
     "src/components/home/Home.jsx": [
       {
         "id": "7b65966c-fd68-425b-a9ea-ac1c014bbfb2",
