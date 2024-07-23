@@ -22,6 +22,7 @@ export const fetchGeminiData = createAsyncThunk(
       return text;
     } catch (error) {
       throw new Error("Something Went Wrong!! Try Again after sometime.");
+    
     }
   },
 );
@@ -46,7 +47,7 @@ const functionSlice = createSlice({
         state.data = action.payload;
       })
       .addCase(fetchGeminiData.rejected, (state, action) => {
-        state.status = "failed";
+        state.status = "INVALID_ARGUMENT";
         state.error = action.error.message;
       });
   },

@@ -1,4 +1,5 @@
 import React from "react";
+import "./header.css"
 
 export default function Header() {
   return (
@@ -6,7 +7,7 @@ export default function Header() {
       <header>
         <p id="header">K.AI</p>
         <nav>
-          <a target="_blank" href="https://github.com/AbhinavTheDev/KAI">
+          <div id="github-logo">         <a target="_blank" href="https://github.com/AbhinavTheDev/KAI">
             <svg viewBox="0 0 138 138" width="30" height="30">
               <g fill="#181616">
                 <path
@@ -18,6 +19,16 @@ export default function Header() {
               </g>
             </svg>
           </a>
+          </div>
+ <div id="hashnode-logo">
+          <a target="_blank" href="https://devcodex.hashnode.dev">
+            <svg width="30" height="30" viewBox="0 0 337 337" fill="none">
+<rect x="113" y="113" width="111" height="111" rx="55.5" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M23.155 112.598c-30.873 30.874-30.873 80.93 0 111.804l89.443 89.443c30.874 30.873 80.93 30.873 111.804 0l89.443-89.443c30.873-30.874 30.873-80.93 0-111.804l-89.443-89.443c-30.874-30.873-80.93-30.873-111.804 0l-89.443 89.443zm184.476 95.033c21.612-21.611 21.612-56.651 0-78.262-21.611-21.612-56.651-21.612-78.262 0-21.612 21.611-21.612 56.651 0 78.262 21.611 21.612 56.651 21.612 78.262 0z" fill="#2962FF"/>
+</svg>
+          </a>
+          </div>
+ 
         </nav>
       </header>
     </>
