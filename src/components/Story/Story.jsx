@@ -17,12 +17,12 @@ export default function Story() {
   const image = useSelector(selectSDImage);
   const loading = useSelector(selectSDStatus);
   const err = useSelector(selectSDError);
-console.log("data:", data);
-console.log("status:", status);
-console.log("ERROR 1", error);
-console.log("image:", image);
-console.log("loading:", loading);
-console.log("ERROR 2", err);
+// console.log("data:", data);
+// console.log("status:", status);
+// console.log("ERROR 1", error);
+// console.log("image:", image);
+// console.log("loading:", loading);
+// console.log("ERROR 2", err);
   // console.log("state:", ApiResponse);
   if (status === "loading") {
     return <Loader />;
