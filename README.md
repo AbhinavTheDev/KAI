@@ -33,7 +33,7 @@ KahaniAI is the open-source AI Story Generator powered by Google's Gemini AI and
 - [CSS](https://www.w3.org/TR/CSS/#css) – CSS
 - [React Router](https://reactrouter.com/en/main) – router
 - [Redux Toolkit](https://redux-toolkit.js.org/) – state management
-- [Vercel](https://vercel.com/) – deployments
+- [Github Pagesl](https://pages.github.com/) – deployments
 
 ## Contributing
 
