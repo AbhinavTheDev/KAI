@@ -43,12 +43,8 @@ main {
     padding: 0;
   }
   .firstSection {
-    /* margin: auto; */
-    /* width: 90vw; */
     font-size: 10px;
     box-sizing: border-box;
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
-    /* background: red; */
   }
 }
 
