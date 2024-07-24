@@ -5,7 +5,8 @@ body {
   padding: 0;
   font-family: sans-serif;
   display: grid;
-  width: 100vw;
+  width: 100%;
+  height: 100%;
   background-color: #dfdfec;
   background: radial-gradient(
       circle,
@@ -28,7 +29,9 @@ body {
     linear-gradient(90deg, #bfc0d2 8px, #f4f4f6 8px) -4px 0;
   background-size: 200px 200px, 200px 200px, 100px 100px, 100px 100px;
 }
-
+main {
+  flex: 1 0 auto;
+}
 @media (max-width: 1200px) {
   /* Styles for tablets and smaller screens */
 }
@@ -40,8 +43,8 @@ body {
     padding: 0;
   }
   .firstSection {
-    margin: auto;
-    width: 90vw;
+    /* margin: auto; */
+    /* width: 90vw; */
     font-size: 10px;
     box-sizing: border-box;
     /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
@@ -116,9 +119,11 @@ a {
 }
 
 .story-wrapper {
+  font-size: 20px;
+  font-weight: 400;
   padding: 1rem;
-  text-align: center;
-  color: black;
+  /* text-align: center; */
+  color: rgb(5, 2, 2);
   border-radius: 10px;
   /* background: #Ffffff; */
   backdrop-filter: blur(10px);

@@ -1,5 +1,6 @@
 footer {
-    position: absolute;
+    position: relative;
+    flex-shrink: 0;
     width: 100%;
     color: white;
     background-color: black;

@@ -1,0 +1,25 @@
+.firstSection {
+    box-sizing: border-box;
+    margin: 0;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); */
+    height: 70vw;
+    /* width: 100vw; */
+}
+.secondSection {
+    height: 70vw;
+}
+details {
+    background-color: #e9eff5;
+    padding: 10px;
+    border: 2px solid rgba(207, 207, 207, 0.788);
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+summary {
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+details p {
+    font-size: 16px;
+}
