@@ -19,6 +19,9 @@ const router = createBrowserRouter(
       <Route path="story" element={<Story />} />
     </Route>,
   ),
+  {
+    basename: "/KAI"
+  }
 );
 
 ReactDOM.createRoot(document.getElementById("root")).render(

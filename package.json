@@ -1,6 +1,7 @@
 {
   "name": "react-javascript",
   "version": "1.0.0",
+  "homepage": "https://abhinavthedev.github.io/KAI/",
   "type": "module",
   "description": "AI Story Generator",
   "scripts": {
