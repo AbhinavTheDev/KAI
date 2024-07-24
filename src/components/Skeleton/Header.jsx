@@ -1,5 +1,6 @@
 import React from "react";
 import "./header.css";
+import favicon from "../../assets/lightfavicon.svg"
 
 export default function Header() {
   return (
@@ -7,7 +8,7 @@ export default function Header() {
       <header>
         <div id="logo">
           <img
-            src="../../assets/lightfavicon.svg"
+            src={favicon}
             type="image/svg"
             width="40px"
             height="40px"
