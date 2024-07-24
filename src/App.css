@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
 body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
   display: grid;
-  width: 100vw ;
-width: auto;
-  height: 100dvh;
-  padding: 0 1.5rem;
+  width: 100vw;
   background-color: #dfdfec;
   background: radial-gradient(
       circle,
@@ -38,19 +39,21 @@ width: auto;
     margin: 0;
     padding: 0;
   }
-.firstSection {
-  margin: auto;
-  padding-top: 40vw;
-  width: 100vw;
-  /* background: red; */
-}
+  .firstSection {
+    margin: auto;
+    width: 90vw;
+    font-size: 10px;
+    box-sizing: border-box;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+    /* background: red; */
+  }
 }
 
 @media (max-width: 480px) {
   /* Styles for small mobile devices */
 }
 
-input {  
+input {
   box-sizing: border-box;
   width: 100%;
   border-width: 2px;
@@ -80,16 +83,7 @@ select {
 input::placeholder {
   color: #949696;
 }
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-family: Merriweather, sans-serif;
-  padding: 5px;
-  font-weight: 600;
-  border-radius: 10px;
-  backdrop-filter: blur(10px);
-}
+
 h4 {
   font-size: 18px;
 }
@@ -105,22 +99,22 @@ p {
 }
 a {
   color: white;
-text-decoration: none;
+  text-decoration: none;
 }
-#header {
-font-size: 1.4rem ;
-}
+
+
 .firstSection {
+  /* margin: auto; */
   text-align: center;
   /* padding-top: 50vw; */
   /* margin: 100px; */
 }
-.nav {
-  width: 100;
-  background-color: black;
-  display: flex;
-  gap: 30px;
+.firstSection p {
+  font-size: 60px;
+  font-weight: 600;
+  backdrop-filter: blur(200px);
 }
+
 .story-wrapper {
   padding: 1rem;
   text-align: center;
@@ -136,14 +130,14 @@ font-size: 1.4rem ;
   align-items: center;
   gap: 10px;
 }
-.btn, .repo {
+.btn,
+.repo {
   width: 160px;
   height: 50px;
   border-radius: 10px;
   font-size: 17px;
   font-weight: bold;
   text-align: center;
-  outline: none;
   border: 1px solid black;
   transition: all 0.3s ease 0s;
   cursor: pointer;
@@ -153,7 +147,6 @@ font-size: 1.4rem ;
   justify-content: center;
   align-items: center;
   gap: 10px;
-
 }
 #btn {
   width: 160px;
@@ -162,12 +155,10 @@ font-size: 1.4rem ;
   border-radius: 5px;
   font-size: 17px;
   font-weight: bold;
-  outline: none;
   border: 2px solid #d9d9d9;
   transition: all 0.3s ease 0s;
   cursor: pointer;
-margin-top: 15px;
-  
+  margin-top: 15px;
 }
 .btn {
   background-color: white;
@@ -178,9 +169,9 @@ margin-top: 15px;
 }
 .submitBtn {
   width: 160px;
-  height: 50px; 
+  height: 50px;
   /* backdrop-filter: blur(20px); */
-background-color: #fff0f06b;
+  background-color: #fff0f06b;
   font-size: 1.5rem;
   font-weight: 600;
   border-width: 2px;

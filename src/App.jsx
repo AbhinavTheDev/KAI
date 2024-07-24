@@ -1,8 +1,7 @@
 import "./App.css";
 import React, { useState } from "react";
 import { Outlet } from "react-router-dom";
-import Header from "./components/Header/Header";
-import Utilities from "./components/Util/util";
+import { Header, Footer, Utilities } from "./components/index";
 
 export default function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -22,6 +21,7 @@ export default function App() {
       {isModalOpen && (
         <Utilities isOpen={isModalOpen} closeModal={closeModal} />
       )}
+      <Footer />
     </>
   );
 }
