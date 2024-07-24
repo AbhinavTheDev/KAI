@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <section className="firstSection">
         <h1>Kahani AI</h1>
-        <p id="intro">A world full of stories.</p>
+        <p id="intro">Experience storytelling reimagined: Where cutting-edge AI transforms your concepts into captivating narratives and stunning visuals</p>
         <div id="btn-wrapper">
           {/* <NavLink to="/inputs"> */}
           {/* yha par button mein yeh prop lagaya tha react modal ke liye onClick={openModal}  */}
